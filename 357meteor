@@ -1,0 +1,183 @@
+
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
+# version
+# Betaflight / MATEKF411RX (M41R) 3.5.7 Mar 15 2019 / 22:05:33 (e9130527c) MSP API: 1.40
+
+board_name MATEKF411RX
+manufacturer_id 
+mcu_id 004c00683239511234393435
+signature 
+
+# reset configuration to default settings
+defaults nosave
+
+# name
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+
+# beeper
+
+# beacon
+
+# map
+map RTEA1234
+
+# serial
+serial 1 2048 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1625 2100 0 0
+aux 1 1 1 900 1225 0 0
+aux 2 2 1 1275 1650 0 0
+aux 3 35 2 1575 2100 0 0
+
+# adjrange
+adjrange 0 1 1 1450 1550 12 1 0 0
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set acc_calibration = -31,34,-429
+set min_check = 1000
+set max_check = 2000
+set fpv_mix_degrees = 17
+set airmode_start_throttle_percent = 55
+set motor_pwm_protocol = DSHOT600
+set bat_capacity = 300
+set vbat_max_cell_voltage = 45
+set vbat_min_cell_voltage = 32
+set vbat_warning_cell_voltage = 33
+set current_meter = NONE
+set small_angle = 180
+set deadband = 3
+set yaw_deadband = 3
+set runaway_takeoff_prevention = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 2402
+set osd_rssi_pos = 365
+set osd_tim_2_pos = 2423
+set osd_flymode_pos = 343
+set osd_throttle_pos = 321
+set osd_crosshairs_pos = 237
+set osd_craft_name_pos = 364
+set osd_warnings_pos = 2345
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set cpu_overclock = 108MHZ
+set vtx_band = 5
+set vtx_channel = 3
+set vtx_freq = 5732
+set vcd_video_system = NTSC
+set frsky_spi_tx_id = 102,21
+set frsky_spi_offset = -12
+set frsky_spi_bind_hop_data = 5,28,53,78,103,128,153,178,203,228,18,43,68,93,118,143,168,193,218,8,33,58,83,108,135,158,183,208,233,23,48,73,98,123,148,173,198,223,13,38,63,88,113,138,163,188,213,0,0,0
+set rcdevice_init_dev_attempts = 4
+
+# profile
+profile 0
+
+set dterm_lowpass_type = BIQUAD
+set dterm_lowpass_hz = 150
+set dterm_lowpass2_hz = 250
+set dterm_notch_cutoff = 0
+set vbat_pid_gain = ON
+set feedforward_transition = 25
+set iterm_relax = RP
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set p_pitch = 65
+set i_pitch = 75
+set d_pitch = 43
+set p_roll = 40
+set i_roll = 75
+set d_roll = 35
+set p_yaw = 75
+set i_yaw = 82
+set f_yaw = 0
+set p_level = 80
+set i_level = 30
+set d_level = 80
+set level_limit = 70
+set horizon_tilt_effect = 80
+set horizon_tilt_expert_mode = ON
+set abs_control_gain = 20
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set thr_mid = 41
+set thr_expo = 47
+set roll_rc_rate = 109
+set pitch_rc_rate = 109
+set yaw_rc_rate = 113
+set roll_expo = 9
+set pitch_expo = 9
+set yaw_expo = 8
+set roll_srate = 78
+set pitch_srate = 78
+set yaw_srate = 74
+set tpa_rate = 12
+set tpa_breakpoint = 1750
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
