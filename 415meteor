@@ -1,0 +1,114 @@
+ 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.1.5 Mar 16 2020 / 05:20:24 (d4e74e39c) MSP API: 1.42
+# manufacturer_id: MTKS   board_name: MATEKF411RX   custom defaults: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF411RX
+manufacturer_id MTKS
+mcu_id 004c00683239511234393435
+signature 
+
+# map
+map RTEA1234
+
+# aux
+aux 0 0 0 1775 2100 0 0
+aux 1 1 1 900 1150 0 0
+aux 2 2 1 1325 1650 0 0
+aux 3 35 1 1825 2100 0 0
+
+# master
+set gyro_sync_denom = 2
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set acc_calibration = -34,34,-453
+set mag_hardware = NONE
+set baro_hardware = NONE
+set min_check = 1000
+set max_check = 2000
+set rx_spi_protocol = FRSKY_D
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set small_angle = 180
+set deadband = 3
+set yaw_deadband = 3
+set pid_process_denom = 2
+set osd_vbat_pos = 2369
+set osd_tim_2_pos = 2391
+set frsky_spi_tx_id = 102,21
+set frsky_spi_offset = -32
+set frsky_spi_bind_hop_data = 5,28,53,78,103,128,153,178,203,228,18,43,68,93,118,143,168,193,218,8,33,58,83,108,135,158,183,208,233,23,48,73,98,123,148,173,198,223,13,38,63,88,113,138,163,188,213,0,0,0
+set gyro_1_align_yaw = 1800
+
+profile 0
+
+# profile 0
+set vbat_pid_gain = ON
+set anti_gravity_threshold = 350
+set anti_gravity_gain = 1300
+set feedforward_transition = 5
+set iterm_rotation = ON
+set pidsum_limit = 1000
+set throttle_boost = 10
+set p_pitch = 70
+set i_pitch = 110
+set d_pitch = 44
+set f_pitch = 93
+set p_roll = 67
+set i_roll = 100
+set p_yaw = 90
+set i_yaw = 100
+set f_yaw = 71
+set abs_control_gain = 10
+set d_min_pitch = 20
+set auto_profile_cell_count = 1
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 25
+set thr_expo = 24
+set roll_rc_rate = 106
+set pitch_rc_rate = 107
+set yaw_rc_rate = 104
+set roll_srate = 75
+set pitch_srate = 76
+set yaw_srate = 75
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 40
+set thr_expo = 35
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
