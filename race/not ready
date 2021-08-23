@@ -1,0 +1,206 @@
+ 
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Jul 26 2021 / 01:33:49 (864cf3f3b) MSP API: 1.44
+# config: manufacturer_id: HBRO, board_name: KAKUTEF7MINIV3, version: a074838b, date: 2021-06-14T21:36:54Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name KAKUTEF7MINIV3
+manufacturer_id HBRO
+mcu_id 002100323538510e35343631
+signature 
+
+# name: ikherty
+
+# resources
+resource MOTOR 1 B04
+resource MOTOR 2 B05
+resource MOTOR 3 B00
+resource MOTOR 4 B01
+
+# feature
+feature LED_STRIP
+
+# serial
+serial 5 2048 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# map
+map RETA1234
+
+# led
+led 0 4,5::COV:6
+led 1 5,5::COV:6
+led 2 6,5::COV:6
+led 3 7,5::COV:6
+led 4 8,5::COV:6
+led 5 9,5::COV:6
+
+# color
+color 3 60,0,255
+color 11 120,0,255
+color 13 0,0,255
+color 14 0,179,255
+
+# mode_color
+mode_color 7 0 6
+
+# aux
+aux 0 0 0 1750 2100 0 0
+aux 1 13 1 1300 1650 0 0
+aux 2 35 1 1750 2100 0 0
+aux 3 45 2 1775 2100 1 0
+aux 4 45 0 900 900 1 39
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 200 500
+
+# master
+set gyro_lowpass_hz = 500
+set gyro_lowpass2_hz = 500
+set dyn_notch_count = 2
+set dyn_notch_q = 450
+set dyn_notch_min_hz = 200
+set dyn_notch_max_hz = 500
+set dyn_lpf_gyro_min_hz = 500
+set dyn_lpf_gyro_max_hz = 1000
+set dyn_lpf_gyro_curve_expo = 0
+set acc_hardware = NONE
+set baro_hardware = NONE
+set max_check = 2000
+set serialrx_provider = CRSF
+set blackbox_sample_rate = 1/2
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set deadband = 3
+set yaw_deadband = 3
+set pid_process_denom = 2
+set ledstrip_visual_beeper_color = RED
+set ledstrip_grb_rgb = RGB
+set ledstrip_profile = RACE
+set ledstrip_race_color = BLUE
+set ledstrip_beacon_color = RED
+set osd_tim_2_pos = 2359
+set osd_craft_name_pos = 2345
+set osd_avg_cell_voltage_pos = 2337
+set debug_mode = GYRO_SCALED
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 1
+set vtx_freq = 5695
+set pinio_box = 40,41,42,43
+set gyro_1_align_yaw = 2700
+set gyro_rpm_notch_q = 350
+set gyro_rpm_notch_min = 80
+set name = ikherty
+
+profile 0
+
+# profile 0
+set anti_gravity_gain = 5000
+set p_pitch = 60
+set i_pitch = 89
+set d_pitch = 45
+set f_pitch = 118
+set p_roll = 52
+set i_roll = 80
+set d_roll = 39
+set f_roll = 106
+set p_yaw = 56
+set i_yaw = 85
+set f_yaw = 106
+set abs_control_gain = 10
+set d_min_roll = 26
+set d_min_pitch = 29
+set dyn_idle_min_rpm = 8
+set simplified_pids_mode = RPY
+set simplified_master_multiplier = 95
+set simplified_roll_pitch_ratio = 105
+set simplified_pd_ratio = 110
+set simplified_pd_gain = 120
+set simplified_feedforward_gain = 125
+set simplified_dterm_filter = ON
+
+profile 1
+
+# profile 1
+set dyn_lpf_dterm_max_hz = 140
+set dyn_lpf_dterm_curve_expo = 6
+set dterm_lowpass_hz = 140
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 4500
+set feedforward_transition = 3
+set iterm_relax_cutoff = 30
+set yaw_lowpass_hz = 100
+set throttle_boost = 7
+set throttle_boost_cutoff = 25
+set p_pitch = 50
+set f_pitch = 113
+set p_roll = 46
+set f_roll = 107
+set p_yaw = 49
+set f_yaw = 107
+set abs_control_gain = 10
+set feedforward_smooth_factor = 25
+set feedforward_max_rate_limit = 90
+set feedforward_boost = 14
+set dyn_idle_min_rpm = 5
+set simplified_pids_mode = RPY
+set simplified_pd_ratio = 110
+set simplified_feedforward_gain = 120
+
+profile 2
+
+# restore original profile selection
+profile 1
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 30
+set thr_expo = 37
+set roll_rc_rate = 20
+set pitch_rc_rate = 20
+set yaw_rc_rate = 20
+set roll_expo = 14
+set pitch_expo = 13
+set yaw_expo = 13
+set roll_srate = 65
+set pitch_srate = 65
+set yaw_srate = 65
+set tpa_breakpoint = 1650
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 95
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
