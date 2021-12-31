@@ -1,0 +1,119 @@
+
+Entering CLI Mode, type 'exit' to return, or 'help'
+
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.11 Nov  9 2021 / 20:27:49 (948ba6339) MSP API: 1.43
+# config: manufacturer_id: BEFH, board_name: BETAFPVF405, version: d2a1f0ac, date: 2019-12-30T03:19:12Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF405
+manufacturer_id BEFH
+mcu_id 003e00165853501020393658
+signature 
+
+
+# resources
+resource MOTOR 1 A03
+resource MOTOR 2 A02
+resource MOTOR 3 B00
+resource MOTOR 4 B01
+
+# feature
+feature -LED_STRIP
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# serial
+serial 3 1 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1300 1700 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 6 1725 2100 0 0
+aux 4 35 5 1650 2100 0 0
+aux 5 36 4 1700 2100 0 0
+
+# master
+set gyro_lowpass2_hz = 225
+set dyn_lpf_gyro_min_hz = 180
+set dyn_lpf_gyro_max_hz = 450
+set acc_calibration = 60,-61,228,1
+set serialrx_provider = CRSF
+set align_board_roll = 180
+set ibata_scale = 560
+set ibata_offset = -500
+set small_angle = 180
+set osd_vbat_pos = 14752
+set osd_rssi_pos = 14363
+set osd_tim_1_pos = 2048
+set osd_flymode_pos = 14349
+set osd_anti_gravity_pos = 14396
+set osd_crosshairs_pos = 14574
+set osd_mah_drawn_pos = 14784
+set osd_warnings_pos = 14633
+set osd_avg_cell_voltage_pos = 14720
+set osd_flip_arrow_pos = 14573
+set vtx_band = 0
+set vtx_channel = 0
+set vtx_power = 0
+set vtx_freq = 0
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 63
+set dyn_lpf_dterm_max_hz = 153
+set dterm_lowpass2_hz = 135
+set i_pitch = 81
+set d_pitch = 32
+set f_pitch = 86
+set p_roll = 41
+set i_roll = 77
+set d_roll = 30
+set f_roll = 81
+set i_yaw = 81
+set f_yaw = 81
+set d_min_roll = 0
+set d_min_pitch = 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_srate = 51
+set pitch_srate = 51
+set yaw_srate = 51
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
